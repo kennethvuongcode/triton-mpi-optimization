@@ -5,12 +5,13 @@ Additionally, I implemented distributed communication primitives using MPI (Mess
 
 **Key Concepts Implemented in this Project:**
 
-Triton-Based Matrix Multiplication Kernel: Implemented an optimized MatMul kernel with tiling, shared memory fetching, and register-level accumulation.
-Operator Fusion: Fused ReLU and element-wise addition to reduce memory traffic and improve efficiency.
-Hyperparameter Tuning: Performed grid search on block sizes to achieve maximum speedup.
-MPI Communication Primitives: Implemented custom All-Reduce and All-to-All operations for distributed workloads.
-Data Parallelism: Implemented dataset sharding and distribution across multiple processes.
-Tensor Model Parallelism: Designed partitioned linear layers for model-parallel forward and backward passes in a transformer layer.
+- Triton-Based Matrix Multiplication Kernel: Implemented an optimized MatMul kernel with tiling, shared memory fetching, and register-level accumulation.
+- Operator Fusion: Fused ReLU and element-wise addition to reduce memory traffic and improve efficiency.
+- Hyperparameter Tuning: Performed grid search on block sizes to achieve maximum speedup.
+- MPI Communication Primitives: Implemented custom All-Reduce and All-to-All operations for distributed workloads.
+- Data Parallelism: Implemented dataset sharding and distribution across multiple processes.
+- Tensor Model Parallelism: Designed partitioned linear layers for model-parallel forward and backward passes in a transformer layer.
+
 This project demonstrates optimizations at both the GPU level (via Triton) and the distributed level (via MPI), improving performance for large-scale matrix operations and distributed deep learning models. Performance benchmarking was conducted on an NVIDIA T4 GPU, and communication efficiency was analyzed on an 8-core MPI setup.
 
 To run the optimized MatMul kernel and distributed training tests, execute the provided Jupyter notebook and MPI test scripts.
