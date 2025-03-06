@@ -3,7 +3,8 @@ In this project, I implemented a high-performance matrix multiplication kernel u
 
 Additionally, I implemented distributed communication primitives using MPI (Message Passing Interface) to support data-parallel and tensor-parallel training in a transformer model. I developed custom implementations of All-Reduce and All-to-All communication, tested their performance against native MPI functions, and implemented the necessary forward and backward communication protocols for distributed training.
 
-Key Concepts Implemented in this Project:
+**Key Concepts Implemented in this Project:**
+
 Triton-Based Matrix Multiplication Kernel: Implemented an optimized MatMul kernel with tiling, shared memory fetching, and register-level accumulation.
 Operator Fusion: Fused ReLU and element-wise addition to reduce memory traffic and improve efficiency.
 Hyperparameter Tuning: Performed grid search on block sizes to achieve maximum speedup.
